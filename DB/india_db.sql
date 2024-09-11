@@ -31,6 +31,7 @@ CREATE TABLE Repair (
     diagnose_id VARCHAR2(50), -- 진단 ID (외래키)
     repair_state NUMBER NOT NULL, -- 수리 단계 상태
     repair_date DATE NOT NULL, -- 수리일시
+    repair_part_inventory VARCHAR2(50), -- 부품 인벤토리
     CONSTRAINT fk_repair_diagnose FOREIGN KEY (diagnose_id) REFERENCES Diagnose(diagnose_id) -- 외래키 설정
 );
 CREATE TABLE Technician (
@@ -396,3 +397,13 @@ SELECT * FROM PRODUCT;
 SELECT * FROM AS_REQUEST;
 SELECT * FROM DIAGNOSE;
 SELECT * FROM REPAIR;
+
+--DROP TABLE REVIEW;
+--DROP TABLE TECHNICIAN;
+--DROP TABLE REVIEW_MORE;
+--DROP TABLE "User";
+--DROP TABLE PRODUCT;
+--DROP TABLE AS_REQUEST;
+--DROP TABLE Diagnose;
+--DROP TABLE REPAIR;
+
